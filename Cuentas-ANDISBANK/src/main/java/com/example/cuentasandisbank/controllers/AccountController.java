@@ -1,12 +1,10 @@
 package com.example.cuentasandisbank.controllers;
 
+import com.example.cuentasandisbank.entities.Account;
 import com.example.cuentasandisbank.services.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/accounts")
@@ -24,7 +22,7 @@ public class AccountController {
     }
 
     @PostMapping("")
-    public ResponseEntity<?> createAccount() {
-        return ResponseEntity.ok(as.createAccount())
+    public ResponseEntity<?> createAccount(@RequestBody Account account) {
+        return ResponseEntity.ok(as.createAccount(account));
     }
 }

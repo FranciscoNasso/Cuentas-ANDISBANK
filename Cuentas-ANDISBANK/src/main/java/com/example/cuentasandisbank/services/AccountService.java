@@ -13,4 +13,12 @@ public class AccountService {
     public List<Account> getAccounts() {
         return ap.getAccount();
     }
+
+    public Account getAccountById(Integer id) {
+        return ap.getAccountById(id);
+    }
+
+    public Account createAccount(Account account) {
+        return ap.createAccount(account);
+    }
 }
