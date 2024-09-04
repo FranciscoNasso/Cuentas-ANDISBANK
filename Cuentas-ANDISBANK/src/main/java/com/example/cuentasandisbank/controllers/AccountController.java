@@ -23,6 +23,11 @@ public class AccountController {
 
     @PostMapping("")
     public ResponseEntity<?> createAccount(@RequestBody Account account) {
-        return ResponseEntity.ok(as.createAccount(account));
-    }
+        Account a = as.createAccount(account);
+        if (a == null) {
+            return ResponseEntity.badRequest().body("Account already exists");
+        }else {
+            return ResponseEntity.ok(a);
+            }
+        }
 }

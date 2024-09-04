@@ -19,6 +19,10 @@ public class AccountService {
     }
 
     public Account createAccount(Account account) {
+        List<Account> accounts = ap.getAccount();
+        if (accounts.contains(account)) {
+            return null;
+        }
         return ap.createAccount(account);
     }
 }
