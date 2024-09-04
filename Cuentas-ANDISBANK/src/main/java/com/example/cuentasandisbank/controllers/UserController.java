@@ -3,6 +3,7 @@ package com.example.cuentasandisbank.controllers;
 import com.example.cuentasandisbank.entities.User;
 
 import com.example.cuentasandisbank.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,8 @@ import java.util.Optional;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
+    private UserService UserService;
 
     @GetMapping("")
     public ResponseEntity<?> getUsers() {
@@ -22,7 +25,7 @@ public class UserController {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<?> getUserById(@PathVariable Integer id) {
-        Optional<User> user = UserService.getUserById(id);
+        User user = UserService.getUserById(id);
         return ResponseEntity.ok(user);
     }
 
