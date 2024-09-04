@@ -18,6 +18,11 @@ public class AccountController {
         return ResponseEntity.ok(as.getAccounts());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getAccountById(@PathVariable Integer id) {
+        return ResponseEntity.ok(as.getAccountById(id));
+    }
+
     @PostMapping("")
     public ResponseEntity<?> createAccount() {
         return ResponseEntity.ok(as.createAccount())
