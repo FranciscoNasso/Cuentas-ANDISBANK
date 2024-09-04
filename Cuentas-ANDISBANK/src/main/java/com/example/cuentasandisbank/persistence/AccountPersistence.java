@@ -11,4 +11,13 @@ public class AccountPersistence {
 
         return accounts;
     }
+
+    public Account getAccountById(Integer id){
+        Account account = new Account();
+        return account;
+    }
+
+    public void createAccount(Account account){
+        pass;
+    }
 }

@@ -23,6 +23,6 @@ public class Account {
     @Column(name = "balance", length = 50)
     private Integer balance;
 
-    @Column(name = "cedula_usuario", length = 50)
-    private Integer cedula_usuario;
+    @Column(name = "ci", length = 50)
+    private Integer ci;
 }
