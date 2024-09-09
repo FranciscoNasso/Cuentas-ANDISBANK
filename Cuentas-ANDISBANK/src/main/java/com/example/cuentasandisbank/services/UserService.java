@@ -19,7 +19,7 @@ public class UserService {
         return UserPersistence.getUsers();
     }
 
-    public User getUserById(Integer id) {
+    public User getUserById(String id) {
         return UserPersistence.getUserById(id);
     }
 
@@ -27,11 +27,11 @@ public class UserService {
         UserPersistence.saveUser(user);
     }
 
-    public void deleteUser(Integer id) {
+    public void deleteUser(String id) {
         UserPersistence.deleteUser(id);
     }
 
-    public void updateUser(Integer id, User user) {
+    public void updateUser(String id, User user) {
         UserPersistence.updateUser(id, user);
     }
 

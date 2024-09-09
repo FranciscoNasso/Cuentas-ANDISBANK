@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserPersistence {
 
-        private static final String FILE_PATH = "src/main/resources/users.json";
+        private static final String FILE_PATH = "src/main/java/com/example/cuentasandisbank/data/Users.json";
 
         public List<User> getUsers() {
             try {
@@ -25,12 +25,13 @@ public class UserPersistence {
             }
         }
 
-        public User getUserById(Integer id) {
+        public User getUserById(String id) {
             List<User> users = getUsers();
             if (users == null) {
                 return null;
             }
-            return users.stream().filter(user -> user.getId().equals(id)).findFirst().orElse(null);
+            users.stream().filter(user -> user.getId().equals(id)).findFirst();
+            return null;
         }
 
         public void saveUser(User user) {
@@ -47,7 +48,7 @@ public class UserPersistence {
             }
         }
 
-        public void deleteUser(Integer id) {
+        public void deleteUser(String id) {
             List<User> users = getUsers();
             if (users == null) {
                 return;
@@ -60,7 +61,7 @@ public class UserPersistence {
             }
         }
 
-        public void updateUser(Integer id, User user) {
+        public void updateUser(String id, User user) {
             List<User> users = getUsers();
             if (users == null) {
                 return;

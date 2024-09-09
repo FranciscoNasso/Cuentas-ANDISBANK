@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping("/find/{id}")
-    public ResponseEntity<?> getUserById(@PathVariable Integer id) {
+    public ResponseEntity<?> getUserById(@PathVariable String id) {
         User user = UserService.getUserById(id);
         return ResponseEntity.ok(user);
     }
@@ -36,13 +36,13 @@ public class UserController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable Integer id) {
+    public ResponseEntity<?> deleteUser(@PathVariable String id) {
         UserService.deleteUser(id);
         return ResponseEntity.ok("User deleted");
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> updateUser(@PathVariable Integer id, @RequestBody User user) {
+    public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody User user) {
         UserService.updateUser(id, user);
         return ResponseEntity.ok("User updated");
     }
