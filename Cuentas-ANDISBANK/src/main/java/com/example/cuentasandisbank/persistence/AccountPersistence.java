@@ -42,4 +42,17 @@ public class AccountPersistence {
         }
         return account;
     }
+
+    public void deleteAccount(Integer id) {
+        List<Account> accounts = getAccount();
+        if (accounts == null) {
+            return;
+        }
+        accounts.removeIf(account -> account.getId().equals(id));
+        try {
+            new ObjectMapper().writeValue(new File(FILE_PATH), accounts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

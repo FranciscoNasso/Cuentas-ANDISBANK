@@ -25,4 +25,8 @@ public class AccountService {
         }
         return ap.createAccount(account);
     }
+
+    public void deleteAccount(Integer id) {
+        ap.deleteAccount(id);
+    }
 }

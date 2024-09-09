@@ -30,4 +30,10 @@ public class AccountController {
             return ResponseEntity.ok(a);
             }
         }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteAccount(@PathVariable Integer id) {
+        as.deleteAccount(id);
+        return ResponseEntity.ok("Account deleted");
+    }
 }
