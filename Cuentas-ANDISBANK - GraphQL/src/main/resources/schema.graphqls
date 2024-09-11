@@ -1,0 +1,18 @@
+type Query {
+    users: [User],
+    accounts: [Account]
+}
+
+type User {
+    id: String!
+    name: String!
+    lastname: String!
+    email: String!
+}
+
+type Account {
+    id: Int!
+    name: String!
+    balance: String!
+    ci: String!
+}
