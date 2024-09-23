@@ -21,7 +21,7 @@ configurations {
 
 repositories {
 	mavenCentral()
-	maven { url 'https://jitpack.io' } // Repositorio para Bucket4j
+	maven { url 'https://jitpack.io/' }
 }
 
 dependencies {
