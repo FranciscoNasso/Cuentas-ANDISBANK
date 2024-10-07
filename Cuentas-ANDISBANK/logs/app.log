@@ -1,0 +1,33 @@
+2024-10-06T20:39:49.590-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] c.e.c.CuentasAndisbankApplication        : Starting CuentasAndisbankApplication using Java 21.0.2 with PID 5936 (C:\Users\franc\OneDrive\Escritorio\Cuentas-ANDISBANK\Cuentas-ANDISBANK\build\classes\java\main started by franc in C:\Users\franc\OneDrive\Escritorio\Cuentas-ANDISBANK\Cuentas-ANDISBANK)
+2024-10-06T20:39:49.593-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] c.e.c.CuentasAndisbankApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-10-06T20:39:49.664-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-06T20:39:49.664-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-06T20:39:50.876-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-06T20:39:50.893-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-06T20:39:50.894-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-06T20:39:50.953-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-06T20:39:50.954-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+2024-10-06T20:39:51.492-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-06T20:39:51.538-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-06T20:39:51.548-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [restartedMain] c.e.c.CuentasAndisbankApplication        : Started CuentasAndisbankApplication in 2.606 seconds (process running for 3.477)
+2024-10-06T20:40:35.094-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-06T20:40:35.095-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-06T20:40:35.098-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-06T20:40:35.181-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [http-nio-8080-exec-1] c.e.c.controllers.UserController         : Getting user endpoint hit
+2024-10-06T20:41:04.421-03:00  INFO 5936 --- [Cuentas-ANDISBANK] [http-nio-8080-exec-3] c.e.c.controllers.UserController         : Getting user endpoint hit
+2024-10-06T21:12:48.670-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] c.e.c.CuentasAndisbankApplication        : Starting CuentasAndisbankApplication using Java 21.0.2 with PID 6364 (C:\Users\franc\OneDrive\Escritorio\Cuentas-ANDISBANK\Cuentas-ANDISBANK\build\classes\java\main started by franc in C:\Users\franc\OneDrive\Escritorio\Cuentas-ANDISBANK\Cuentas-ANDISBANK)
+2024-10-06T21:12:48.674-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] c.e.c.CuentasAndisbankApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-10-06T21:12:48.723-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-06T21:12:48.723-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-06T21:12:50.326-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-06T21:12:50.341-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-06T21:12:50.341-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-06T21:12:50.401-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-06T21:12:50.401-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1677 ms
+2024-10-06T21:12:51.577-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-06T21:12:51.597-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-06T21:12:51.666-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-06T21:12:51.679-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [restartedMain] c.e.c.CuentasAndisbankApplication        : Started CuentasAndisbankApplication in 3.555 seconds (process running for 4.331)
+2024-10-06T21:12:52.282-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [RMI TCP Connection(3)-192.168.56.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-06T21:12:52.282-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [RMI TCP Connection(3)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-06T21:12:52.284-03:00  INFO 6364 --- [Cuentas-ANDISBANK] [RMI TCP Connection(3)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

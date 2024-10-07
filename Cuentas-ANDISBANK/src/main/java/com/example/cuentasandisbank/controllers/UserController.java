@@ -1,5 +1,7 @@
 package com.example.cuentasandisbank.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import io.github.bucket4j.Bandwidth;
 import io.github.bucket4j.Bucket;
 import io.github.bucket4j.Refill;
@@ -19,12 +21,13 @@ import java.util.concurrent.Semaphore;
 @RequestMapping("/user")
 public class UserController {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     private final Bucket bucket = Bucket.builder()
-            .addLimit(Bandwidth.classic(10, Refill.intervally(1, Duration.ofSeconds(1))))
+            .addLimit(Bandwidth.classic(10, Refill.intervally(1, Duration.ofSeconds(65))))
             .build();
 
-    private final Semaphore semaphore = new Semaphore(5);
+    private final Semaphore semaphore = new Semaphore(1);
 
     @Autowired
     private UserService UserService;
@@ -32,6 +35,7 @@ public class UserController {
     @GetMapping("")
     public ResponseEntity<?> getUsers() {
         int tokensToConsume = 1;
+        logger.info("Getting user endpoint hit");
         if (bucket.tryConsume(tokensToConsume)) {
             List<User> users = UserService.getUsers();
             return ResponseEntity.ok(users);
@@ -43,6 +47,7 @@ public class UserController {
     @GetMapping("/find/{id}")
     public ResponseEntity<?> getUserById(@PathVariable String id) {
         try {
+            logger.info("Getting user by id endpoint hit");
             if (semaphore.tryAcquire()) {
                 try {
                     User user = UserService.getUserById(id);
@@ -60,18 +65,21 @@ public class UserController {
 
     @PostMapping("/save")
     public ResponseEntity<?> saveUser(@RequestBody User user) {
+        logger.info("Saving user endpoint hit");
         UserService.saveUser(user);
         return ResponseEntity.ok("User saved");
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) {
+        logger.info("Deleting user endpoint hit");
         UserService.deleteUser(id);
         return ResponseEntity.ok("User deleted");
     }
 
     @PutMapping("/update/{id}")
     public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody User user) {
+        logger.info("Updating user endpoint hit");
         UserService.updateUser(id, user);
         return ResponseEntity.ok("User updated");
     }
